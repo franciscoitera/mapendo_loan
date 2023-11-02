@@ -31,7 +31,7 @@ class _formCarYear extends State<FormKtp> {
         child: Center(child: Text(text)),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
-          color: Color(0xffEAF8F9),
+          color: const Color(0xffEAF8F9),
         ));
   }
 
@@ -138,30 +138,32 @@ class _formCarYear extends State<FormKtp> {
                       height: MediaQuery.of(context).size.height,
                       child: Stack(
                         children: <Widget>[
-                          Container(
-                            width: MediaQuery.of(context).size.width,
-                            child: Image.asset(
-                              "assets/topCurveBlue.png",
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                          Positioned(
-                            top: 250,
-                            left: 16,
-                            child: Image.asset("assets/stair.png"),
-                          ),
+                          // Container(
+                          //   width: MediaQuery.of(context).size.width,
+                          //   child: Image.asset(
+                          //     "assets/images/team_illistruation.png",
+                          //     fit: BoxFit.fill,
+                          //   ),
+                          // ),
+                          // Positioned(
+                          //   top: 250,
+                          //   left: 16,
+                          //   child: Image.asset(
+                          //       "assets/images/team_illistruation.png"),
+                          // ),
+                          // Positioned(
+                          //   top: 200,
+                          //   left: 20,
+                          //   child: Image.asset("assets/images/team_illistruation.png"),
+                          // ),
                           Positioned(
                             top: 200,
-                            left: 20,
-                            child: Image.asset("assets/stairMan.png"),
-                          ),
-                          Positioned(
-                            top: 300,
-                            // left: 100,
+                            height: 150,
                             child: Container(
                               width: MediaQuery.of(context).size.width,
                               child: Center(
-                                  child: Image.asset("assets/check.png")),
+                                  child: Image.asset(
+                                      "assets/images/team_illistruation.png")),
                             ),
                           ),
                           Positioned(
@@ -169,7 +171,7 @@ class _formCarYear extends State<FormKtp> {
                               // left: 130,
                               child: Container(
                                 width: MediaQuery.of(context).size.width,
-                                child: Center(
+                                child: const Center(
                                   child: Text(
                                     "Personal Detail",
                                     style: TextStyle(fontSize: 18),
@@ -195,7 +197,7 @@ class _formCarYear extends State<FormKtp> {
                                         width:
                                             MediaQuery.of(context).size.width /
                                                 1.2,
-                                        child: Text(
+                                        child: const Text(
                                           "KTP Number",
                                           style: TextStyle(fontSize: 18),
                                         ),
@@ -215,9 +217,10 @@ class _formCarYear extends State<FormKtp> {
                                           controller: _controller,
                                           decoration: InputDecoration(
                                             filled: true,
-                                            fillColor: Color(0xFFF5f5f5),
-                                            enabledBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                            fillColor: const Color(0xFFF5f5f5),
+                                            enabledBorder:
+                                                const OutlineInputBorder(
+                                              borderSide: BorderSide(
                                                   color: Colors.transparent,
                                                   width: 2.0),
                                             ),
@@ -225,7 +228,7 @@ class _formCarYear extends State<FormKtp> {
                                               onPressed: () {
                                                 validateData();
                                               },
-                                              icon: Icon(Icons.forward),
+                                              icon: const Icon(Icons.forward),
                                             ),
                                           ),
                                         ),

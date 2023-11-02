@@ -33,11 +33,11 @@ class _formCarYear extends State<FormAttachDocuments> {
     return Container(
         height: MediaQuery.of(context).size.height * 0.06,
         width: width,
-        child: Center(child: AutoSizeText(text)),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
           color: const Color(0xffEAF8F9),
-        ));
+        ),
+        child: Center(child: AutoSizeText(text)));
   }
 
   Widget displayData() {
@@ -91,22 +91,22 @@ class _formCarYear extends State<FormAttachDocuments> {
         return Dialog(
           child: Container(
             height: 70,
-            child: new Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                new CircularProgressIndicator(),
+                const CircularProgressIndicator(),
                 Container(
                   width: 10,
                 ),
-                new AutoSizeText("Checking Eligibility"),
+                const AutoSizeText("Checking Eligibility"),
               ],
             ),
           ),
         );
       },
     );
-    new Future.delayed(new Duration(seconds: 3), () {
+    Future.delayed(new Duration(seconds: 3), () {
       Navigator.pop(context); //pop dialog
       Navigator.pushReplacement(
           context,
@@ -115,7 +115,7 @@ class _formCarYear extends State<FormAttachDocuments> {
     });
   }
 
-  var _controller = TextEditingController();
+  final _controller = TextEditingController();
   DateTime selectedDate = DateTime.now();
   var myFormat = DateFormat('d-MM-yyyy');
 
@@ -186,8 +186,8 @@ class _formCarYear extends State<FormAttachDocuments> {
                           ),
                         )),
                     Positioned(
-                      child: displayData(),
                       top: 50,
+                      child: displayData(),
                       // left: 50,
                     ),
                     Positioned(
@@ -209,14 +209,14 @@ class _formCarYear extends State<FormAttachDocuments> {
                                         MaterialButton(
                                             height: 50,
                                             minWidth: 50,
-                                            child: const Center(
-                                              child: Icon(Icons.add),
-                                            ),
                                             onPressed: () {},
                                             color: Colors.white,
                                             shape: RoundedRectangleBorder(
                                                 borderRadius:
-                                                    BorderRadius.circular(5))),
+                                                    BorderRadius.circular(5)),
+                                            child: const Center(
+                                              child: Icon(Icons.add),
+                                            )),
                                         Container(
                                           height: 5,
                                         ),
@@ -229,14 +229,14 @@ class _formCarYear extends State<FormAttachDocuments> {
                                         MaterialButton(
                                             height: 50,
                                             minWidth: 50,
-                                            child: const Center(
-                                              child: Icon(Icons.add),
-                                            ),
                                             onPressed: () {},
                                             color: Colors.white,
                                             shape: RoundedRectangleBorder(
                                                 borderRadius:
-                                                    BorderRadius.circular(5))),
+                                                    BorderRadius.circular(5)),
+                                            child: const Center(
+                                              child: Icon(Icons.add),
+                                            )),
                                         Container(
                                           height: 5,
                                         ),
@@ -248,14 +248,14 @@ class _formCarYear extends State<FormAttachDocuments> {
                                         MaterialButton(
                                             height: 50,
                                             minWidth: 50,
-                                            child: const Center(
-                                              child: Icon(Icons.add),
-                                            ),
                                             onPressed: () {},
                                             color: Colors.white,
                                             shape: RoundedRectangleBorder(
                                                 borderRadius:
-                                                    BorderRadius.circular(5))),
+                                                    BorderRadius.circular(5)),
+                                            child: const Center(
+                                              child: Icon(Icons.add),
+                                            )),
                                         Container(
                                           height: 5,
                                         ),
@@ -268,14 +268,14 @@ class _formCarYear extends State<FormAttachDocuments> {
                                         MaterialButton(
                                             height: 50,
                                             minWidth: 50,
-                                            child: const Center(
-                                              child: Icon(Icons.add),
-                                            ),
                                             onPressed: () {},
                                             color: Colors.white,
                                             shape: RoundedRectangleBorder(
                                                 borderRadius:
-                                                    BorderRadius.circular(5))),
+                                                    BorderRadius.circular(5)),
+                                            child: const Center(
+                                              child: Icon(Icons.add),
+                                            )),
                                         Container(
                                           height: 5,
                                         ),
@@ -294,11 +294,11 @@ class _formCarYear extends State<FormAttachDocuments> {
                                         Color(0xff66BBAA)
                                       ])),
                                   child: MaterialButton(
-                                    child: const AutoSizeText("Submit"),
                                     minWidth: 150,
                                     onPressed: () {
                                       _onLoading();
                                     },
+                                    child: const AutoSizeText("Submit"),
                                   ),
                                 )),
                           ],

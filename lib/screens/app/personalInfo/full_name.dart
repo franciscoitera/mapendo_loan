@@ -80,38 +80,39 @@ class _fullName extends State<FullName> {
               height: MediaQuery.of(context).size.height,
               child: Stack(
                 children: <Widget>[
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    child: Image.asset(
-                      "assets/topCurveBlue.png",
-                      fit: BoxFit.fill,
-                    ),
-                  ),
+                  // Container(
+                  //   width: MediaQuery.of(context).size.width,
+                  //   child: Image.asset(
+                  //     "assets/images/curve.jpg",
+                  //     fit: BoxFit.fill,
+                  //   ),
+                  // ),
+                  // Positioned(
+                  //   top: 210,
+                  //   right: 30,
+                  //   child: Image.asset("assets/manClimb2.png"),
+                  // ),
                   Positioned(
-                    top: 210,
-                    right: 30,
-                    child: Image.asset("assets/manClimb2.png"),
-                  ),
-                  Positioned(
-                      top: 300,
-//                      left: 70,
+                      top: 210,
+                      height: 150,
                       child: Container(
-                        child: Center(
-                          child: Image.asset("assets/teoLoan.png"),
-                        ),
                         width: MediaQuery.of(context).size.width,
+                        child: Center(
+                          child: Image.asset(
+                              "assets/images/team_illistruation.png"),
+                        ),
                       )),
                   Positioned(
                       top: 400,
 //                      left: 130,
                       child: Container(
+                        width: MediaQuery.of(context).size.width,
                         child: const Center(
                           child: Text(
                             "Personal Detail",
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
-                        width: MediaQuery.of(context).size.width,
                       )),
                   Positioned(
                     child: displayData(),

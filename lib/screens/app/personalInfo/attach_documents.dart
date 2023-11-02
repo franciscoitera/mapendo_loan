@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:mapendo/screens/app/form/formCarModel.dart';
+import 'package:mapendo/screens/app/form/formLastName.dart';
 import 'package:mapendo/screens/app/personalInfo/dealar_detail.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -68,28 +67,37 @@ class _attachDocuments extends State<AttachDocuments> {
                 width: MediaQuery.of(context).size.width,
                 child: Stack(
                   children: <Widget>[
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      child: Image.asset(
-                        "assets/topCurveBlue.png",
-                        fit: BoxFit.fill,
-                      ),
-                    ),
+//                     Container(
+//                       width: MediaQuery.of(context).size.width,
+//                       child: Image.asset(
+//                         "assets/topCurveBlue.png",
+//                         fit: BoxFit.fill,
+//                       ),
+//                     ),
+//                     Positioned(
+//                       top: 210,
+//                       right: 30,
+//                       child: Image.asset("assets/manClimb2.png"),
+//                     ),
+//                     Positioned(
+//                         top: 300,
+// //                      left: 70,
+//                         child: Container(
+//                           child: Center(
+//                             child: Image.asset("assets/teoLoan.png"),
+//                           ),
+//                           width: MediaQuery.of(context).size.width,
+//                         )),
                     Positioned(
-                      top: 210,
-                      right: 30,
-                      child: Image.asset("assets/manClimb2.png"),
-                    ),
-                    Positioned(
-                        top: 300,
-//                      left: 70,
+                        top: 210,
+                        height: 150,
                         child: Container(
-                          child: Center(
-                            child: Image.asset("assets/teoLoan.png"),
-                          ),
                           width: MediaQuery.of(context).size.width,
+                          child: Center(
+                            child: Image.asset(
+                                "assets/images/team_illistruation.png"),
+                          ),
                         )),
-
                     // Positioned(
                     //   top: 400,
                     //   left: 130,
@@ -107,17 +115,17 @@ class _attachDocuments extends State<AttachDocuments> {
                         top: 420,
 //                      left: 130,
                         child: Container(
-                          child: Center(
+                          width: MediaQuery.of(context).size.width,
+                          child: const Center(
                             child: Text(
                               "Attach Documents",
                               style: TextStyle(fontSize: 18),
                             ),
                           ),
-                          width: MediaQuery.of(context).size.width,
                         )),
 
                     Positioned(
-                      left: 40,
+                      left: 10,
                       top: 460,
                       child: Container(
                         child: Row(
@@ -140,7 +148,7 @@ class _attachDocuments extends State<AttachDocuments> {
                                 Container(
                                   height: 5,
                                 ),
-                                Text('Address Proof'),
+                                Text('Bank Statement'),
                               ],
                             ),
                             Container(
@@ -162,7 +170,7 @@ class _attachDocuments extends State<AttachDocuments> {
                                 Container(
                                   height: 5,
                                 ),
-                                Text('Identity Proof'),
+                                Text('NIDA/Driving/Vote ID'),
                               ],
                             ),
                             Container(
@@ -194,6 +202,8 @@ class _attachDocuments extends State<AttachDocuments> {
 
                     // ignore: sort_child_properties_last
                     Positioned(
+                      bottom: 20,
+                      right: 40,
                       child: Container(
                         height: MediaQuery.of(context).size.height / 14,
                         decoration: BoxDecoration(
@@ -220,8 +230,6 @@ class _attachDocuments extends State<AttachDocuments> {
                           ),
                         ),
                       ),
-                      bottom: 20,
-                      right: 40,
                     )
 
 //                    Positioned(

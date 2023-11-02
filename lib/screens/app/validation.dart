@@ -52,6 +52,17 @@ class ValidationData {
     return 'null';
   }
 
+  static String? nameValidate(String? passValue) {
+    if (passValue == null || passValue.isEmpty) {
+      return 'Please enter Name';
+    } else if (passValue.length >= 20) {
+      return 'too long name';
+    } else if (passValue.length <= 2) {
+      return 'too short name';
+    }
+    return 'null';
+  }
+
   static String? ktpValidate(String? passValue) {
     if (passValue == null || passValue.isEmpty) {
       return 'Please enter KTP';

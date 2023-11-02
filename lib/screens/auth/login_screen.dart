@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mapendo/screens/app/check_eligibility.dart';
+import 'package:mapendo/screens/app/form/form1.dart';
+import 'package:mapendo/screens/app/personalInfo/full_name.dart';
 import 'package:mapendo/screens/auth/register_screen.dart';
 import 'package:mapendo/screens/auth/verify.dart';
 
@@ -137,7 +140,7 @@ class _MyPhoneState extends State<MyPhone> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const Register(),
+                            builder: (context) => FullName(),
                           ),
                         );
                       },

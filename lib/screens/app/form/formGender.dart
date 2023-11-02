@@ -4,21 +4,21 @@ import 'package:mapendo/screens/app/form/formKtpNumber.dart';
 import 'package:mapendo/screens/app/validation.dart';
 import 'package:page_transition/page_transition.dart';
 
-class FormCarYear extends StatefulWidget {
-  final String carBrand;
-  final String carModel;
+class FormGender extends StatefulWidget {
+  final String firstname;
+  final String surname;
 
-  const FormCarYear(
-      {required Key key, required this.carModel, required this.carBrand})
+  const FormGender(
+      {required Key key, required this.firstname, required this.surname})
       : super(key: key);
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return _formCarYear();
+    return _formGender();
   }
 }
 
-class _formCarYear extends State<FormCarYear> {
+class _formGender extends State<FormGender> {
   Widget yourContainer(var height, var width, var text) {
     return Container(
         height: MediaQuery.of(context).size.height * 0.06,
@@ -26,7 +26,7 @@ class _formCarYear extends State<FormCarYear> {
         child: Center(child: Text(text)),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
-          color: Color(0xffEAF8F9),
+          color: const Color(0xffEAF8F9),
         ));
   }
 
@@ -40,11 +40,11 @@ class _formCarYear extends State<FormCarYear> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              yourContainer(35.0, 80.0, widget.carBrand),
+              yourContainer(35.0, 80.0, widget.firstname),
               Container(
                 width: 10,
               ),
-              yourContainer(35.0, 80.0, widget.carModel),
+              yourContainer(35.0, 80.0, widget.surname),
               Container(
                 width: 10,
               ),
@@ -104,8 +104,8 @@ class _formCarYear extends State<FormCarYear> {
           PageTransition(
               type: PageTransitionType.fade,
               child: FormKtp(
-                  carBrand: widget.carBrand,
-                  carModel: widget.carModel,
+                  carBrand: widget.firstname,
+                  carModel: widget.surname,
                   carYear: _controller.text,
                   key: GlobalKey<FormState>())));
 
@@ -132,40 +132,50 @@ class _formCarYear extends State<FormCarYear> {
                       height: MediaQuery.of(context).size.height,
                       child: Stack(
                         children: <Widget>[
-                          Container(
-                            width: MediaQuery.of(context).size.width,
-                            child: Image.asset(
-                              "assets/topCurveBlue.png",
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                          Positioned(
-                            top: 250,
-                            left: 16,
-                            child: Image.asset("assets/stair.png"),
-                          ),
+                          // Container(
+                          //   width: MediaQuery.of(context).size.width,
+                          //   child: Image.asset(
+                          //     "assets/images/team_illistruation.png",
+                          //     fit: BoxFit.fill,
+                          //   ),
+                          // ),
                           Positioned(
                             top: 200,
-                            left: 20,
-                            child: Image.asset("assets/stairMan.png"),
-                          ),
-                          Positioned(
-                            top: 300,
-                            // left: 100,
+                            height: 150,
                             child: Container(
                               width: MediaQuery.of(context).size.width,
                               child: Center(
-                                  child: Image.asset("assets/check.png")),
+                                  child: Image.asset(
+                                      "assets/images/team_illistruation.png")),
                             ),
                           ),
+                          // Positioned(
+                          //   top: 250,
+                          //   left: 16,
+                          //   child: Image.asset("assets/stair.png"),
+                          // ),
+                          // Positioned(
+                          //   top: 200,
+                          //   left: 20,
+                          //   child: Image.asset("assets/stairMan.png"),
+                          // ),
+                          // Positioned(
+                          //   top: 300,
+                          //   // left: 100,
+                          //   child: Container(
+                          //     width: MediaQuery.of(context).size.width,
+                          //     child: Center(
+                          //         child: Image.asset("assets/check.png")),
+                          //   ),
+                          // ),
                           Positioned(
                               top: 400,
                               // left: 130,
                               child: Container(
                                 width: MediaQuery.of(context).size.width,
-                                child: Center(
+                                child: const Center(
                                   child: Text(
-                                    "Vehical Detail",
+                                    "Personal Details",
                                     style: TextStyle(fontSize: 18),
                                   ),
                                 ),
@@ -211,7 +221,7 @@ class _formCarYear extends State<FormCarYear> {
                                           keyboardType: TextInputType.number,
                                           decoration: InputDecoration(
                                             filled: true,
-                                            fillColor: Color(0xFFF5f5f5),
+                                            fillColor: const Color(0xFFF5f5f5),
                                             enabledBorder:
                                                 const OutlineInputBorder(
                                               borderSide: BorderSide(
@@ -221,17 +231,23 @@ class _formCarYear extends State<FormCarYear> {
                                             suffixIcon: IconButton(
                                               onPressed: () {
                                                 validateData();
-//                                          Navigator.pushReplacement(
-//                                              context,
-//                                              PageTransition(
-//                                                  type: PageTransitionType.fade,
-//                                                  child: FormKtp(
-//                                                    carBrand: widget.carBrand,
-//                                                    carModel: widget.carModel,
-//                                                    carYear: _controller.text,
-//                                                  )));
+                                                Navigator.pushReplacement(
+                                                    context,
+                                                    PageTransition(
+                                                        type: PageTransitionType
+                                                            .fade,
+                                                        child: FormKtp(
+                                                          carBrand:
+                                                              widget.firstname,
+                                                          carModel:
+                                                              widget.surname,
+                                                          carYear:
+                                                              _controller.text,
+                                                          key: GlobalKey<
+                                                              FormState>(),
+                                                        )));
                                               },
-                                              icon: Icon(Icons.forward),
+                                              icon: const Icon(Icons.forward),
                                             ),
                                           ),
                                         ),

@@ -72,32 +72,34 @@ class FirstScreen extends StatelessWidget {
               Stack(
                 alignment: Alignment.center,
                 children: [
-                  Transform(
-                    transform: Matrix4.skewY(3),
-                    child: Column(
-                      children: [
-                        Container(
-                          // width: double.infinity,
-                          height: 100,
-                          color: Colors.green,
-                        ),
-                        Container(
-                          // width: double.infinity,
-                          height: 60,
-                          color: Colors.amberAccent,
-                        )
-                      ],
+                  Column(children: [
+                    Transform(
+                      transform: Matrix4.skewY(3),
+                      child: Column(
+                        children: [
+                          Container(
+                            // width: double.infinity,
+                            height: 100,
+                            color: Colors.green,
+                          ),
+                          Container(
+                            // width: double.infinity,
+                            height: 60,
+                            color: Colors.amberAccent,
+                          )
+                        ],
+                      ),
                     ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 0),
-                    alignment: Alignment.topRight,
-                    height: 150,
-                    child: Image.asset(
-                      'assets/images/logo.png',
-                      fit: BoxFit.contain,
-                    ),
-                  )
+                    Container(
+                      margin: EdgeInsets.only(bottom: 0),
+                      alignment: Alignment.topRight,
+                      height: 100,
+                      child: Image.asset(
+                        'assets/images/logo.png',
+                        fit: BoxFit.contain,
+                      ),
+                    )
+                  ]),
                 ],
               )
             ],

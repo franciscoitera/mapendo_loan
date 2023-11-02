@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mapendo/screens/app/form/formCarModel.dart';
+import 'package:mapendo/screens/app/form/formLastName.dart';
 import 'package:mapendo/screens/app/personalInfo/attach_documents.dart';
 import 'package:mapendo/screens/app/validation.dart';
 import 'package:page_transition/page_transition.dart';
@@ -95,38 +95,48 @@ class _workPlace extends State<WorkPlace> {
                       width: MediaQuery.of(context).size.width,
                       child: Stack(
                         children: <Widget>[
-                          Container(
-                            width: MediaQuery.of(context).size.width,
-                            child: Image.asset(
-                              "assets/topCurveBlue.png",
-                              fit: BoxFit.fill,
-                            ),
-                          ),
+//                           Container(
+//                             width: MediaQuery.of(context).size.width,
+//                             child: Image.asset(
+//                               "assets/topCurveBlue.png",
+//                               fit: BoxFit.fill,
+//                             ),
+//                           ),
+//                           Positioned(
+//                             top: 210,
+//                             right: 30,
+//                             child: Image.asset("assets/manClimb2.png"),
+//                           ),
+//                           Positioned(
+//                               top: 300,
+// //                      left: 70,
+//                               child: Container(
+//                                 child: Center(
+//                                   child: Image.asset("assets/teoLoan.png"),
+//                                 ),
+//                                 width: MediaQuery.of(context).size.width,
+//                               )),
                           Positioned(
-                            top: 210,
-                            right: 30,
-                            child: Image.asset("assets/manClimb2.png"),
-                          ),
-                          Positioned(
-                              top: 300,
-//                      left: 70,
+                              top: 210,
+                              height: 150,
                               child: Container(
-                                child: Center(
-                                  child: Image.asset("assets/teoLoan.png"),
-                                ),
                                 width: MediaQuery.of(context).size.width,
+                                child: Center(
+                                  child: Image.asset(
+                                      "assets/images/team_illistruation.png"),
+                                ),
                               )),
                           Positioned(
                               top: 400,
 //                      left: 130,
                               child: Container(
+                                width: MediaQuery.of(context).size.width,
                                 child: const Center(
                                   child: Text(
                                     "Personal Detail",
                                     style: TextStyle(fontSize: 18),
                                   ),
                                 ),
-                                width: MediaQuery.of(context).size.width,
                               )),
                           Positioned(
                             child: displayData(),
@@ -147,7 +157,7 @@ class _workPlace extends State<WorkPlace> {
                                             MediaQuery.of(context).size.width /
                                                 1.3,
                                         child: const Text(
-                                          "Workplace Address",
+                                          "Address",
                                           style: TextStyle(fontSize: 18),
                                         ),
                                       ),
@@ -170,8 +180,8 @@ class _workPlace extends State<WorkPlace> {
                                                     2,
                                                 child: TextFormField(
                                                   controller: _controller,
-                                                  validator: ValidationData
-                                                      .workplaceValidate,
+                                                  // validator: ValidationData
+                                                  //     .workplaceValidate,
                                                   decoration:
                                                       const InputDecoration(
                                                     filled: true,

@@ -90,26 +90,36 @@ class _emailId extends State<EmailIdClass> {
                       width: MediaQuery.of(context).size.width,
                       child: Stack(
                         children: <Widget>[
-                          Container(
-                            width: MediaQuery.of(context).size.width,
-                            child: Image.asset(
-                              "assets/topCurveBlue.png",
-                              fit: BoxFit.fill,
-                            ),
-                          ),
+                          // Container(
+                          //   width: MediaQuery.of(context).size.width,
+                          //   child: Image.asset(
+                          //     "assets/topCurveBlue.png",
+                          //     fit: BoxFit.fill,
+                          //   ),
+                          // ),
+                          // Positioned(
+                          //   top: 210,
+                          //   right: 30,
+                          //   child: Image.asset("assets/manClimb2.png"),
+                          // ),
+//                           Positioned(
+//                               top: 300,
+// //                      left: 70,
+//                               child: Container(
+//                                 child: Center(
+//                                   child: Image.asset("assets/teoLoan.png"),
+//                                 ),
+//                                 width: MediaQuery.of(context).size.width,
+//                               )),
                           Positioned(
-                            top: 210,
-                            right: 30,
-                            child: Image.asset("assets/manClimb2.png"),
-                          ),
-                          Positioned(
-                              top: 300,
-//                      left: 70,
+                              top: 210,
+                              height: 150,
                               child: Container(
-                                child: Center(
-                                  child: Image.asset("assets/teoLoan.png"),
-                                ),
                                 width: MediaQuery.of(context).size.width,
+                                child: Center(
+                                  child: Image.asset(
+                                      "assets/images/team_illistruation.png"),
+                                ),
                               )),
                           Positioned(
                               top: 400,
@@ -163,8 +173,8 @@ class _emailId extends State<EmailIdClass> {
                                                   2,
                                               child: TextFormField(
                                                 controller: _controller,
-                                                validator: ValidationData
-                                                    .emailValidate,
+                                                // validator: ValidationData
+                                                //     .emailValidate,
                                                 decoration:
                                                     const InputDecoration(
                                                   filled: true,
